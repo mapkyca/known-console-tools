@@ -18,6 +18,7 @@ Copy or symlink to the directories below so that they appear in ```ConsolePlugin
 
 * [EntityDump](EntityDump) A tool for outputting the raw contents of an object as identified by UUID, ID or short url
 * [EntityList](EntityList) List the UUIDs of the last X entities that match the given search criteria
+* [ShowACL](ShowACL) A tool to list the access groups a given user has access to (including those supplied programmatically)
 
 ## Warning
 
