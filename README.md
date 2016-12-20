@@ -14,6 +14,11 @@ application support.
 
 Copy or symlink to the directories below so that they appear in ```ConsolePlugins```
 
+## Tools available
+
+* [EntityDump](EntityDump) A tool for outputting the raw contents of an object as identified by UUID, ID or short url
+* [EntityList](EntityList) List the UUIDs of the last X entities that match the given search criteria
+
 ## Warning
 
 I wouldn't recommend having these in place on a live system, as that would likely pose a security risk.
