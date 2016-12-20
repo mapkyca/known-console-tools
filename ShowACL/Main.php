@@ -19,8 +19,10 @@ namespace ConsolePlugins\ShowACL {
 	    }
 	    
 	    if ($groups = \Idno\Core\Idno::site()->session()->currentUser()->getXAccessGroupIDs($acl)) {
+		$n = 1;
 		foreach ($groups as $group) {
-		    $output->writeln(" * $group");
+		    $output->writeln(" $n * $group");
+		    $n++;
 		}
 	    } else {
 		throw new \RuntimeException("Could not retrieve access group IDs");
