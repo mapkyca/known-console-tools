@@ -22,8 +22,28 @@ namespace ConsolePlugins\EntityList {
 	    $limit = (int)$input->getArgument('limit');
 	    $offset = (int)$input->getArgument('offset');
 	    
+	    $search = [];
+	    if (!empty($input->getArgument('search'))) {
+		$values = explode(',', $input->getArgument('search'));
+		
+		if (!empty($values)) {
+		    
+		    $output->writeln("Applying search filters:");
+		    
+		    foreach($values as $value) {
+			$bits = explode('=', $value);
+			if (count($bits) == 2) {
+			    $search[trim($bits[0])] = trim($bits[1]);
+			    $output->writeln("\t$value");
+			}
+		    }
+		    
+		    $output->writeln("");
+		}
+		
+	    }
 	    
-	    if ($objects = \Idno\Common\Entity::getFromX($types, [], [], $limit, $offset)) {
+	    if ($objects = \Idno\Common\Entity::getFromX($types, $search, [], $limit, $offset)) {
 		foreach ($objects as $object) {
 		    $output->writeln(" * " . $object->getUUID() . ' (' . get_class($object) . ')');
 		}
@@ -46,6 +66,7 @@ namespace ConsolePlugins\EntityList {
 		new \Symfony\Component\Console\Input\InputArgument('limit', \Symfony\Component\Console\Input\InputArgument::OPTIONAL, 'Number of stuff to return', 5),
 		new \Symfony\Component\Console\Input\InputArgument('offset', \Symfony\Component\Console\Input\InputArgument::OPTIONAL, 'Offset', 0),
 		new \Symfony\Component\Console\Input\InputArgument('username', \Symfony\Component\Console\Input\InputArgument::OPTIONAL, 'User to use to retrieve data', ''),
+		new \Symfony\Component\Console\Input\InputArgument('search', \Symfony\Component\Console\Input\InputArgument::OPTIONAL, 'Comma separated string of key=value search pairs', ''),
             ];
         }
 
