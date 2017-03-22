@@ -20,6 +20,9 @@ Copy or symlink to the directories below so that they appear in ```ConsolePlugin
 * [EntityList](EntityList) List the UUIDs of the last X entities that match the given search criteria
 * [ShowACL](ShowACL) A tool to list the access groups a given user has access to (including those supplied programmatically)
 * [TweakEntity](TweakEntity) A tool to tweak field values on a given entity
+* [DumpConfig](DumpConfig) Dump the current running config
+* [ListUsers](ListUsers) Quickly list system users, or optional admin users
+
 
 ## Warning
 
