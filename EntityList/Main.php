@@ -46,6 +46,10 @@ namespace ConsolePlugins\EntityList {
 	    if ($objects = \Idno\Common\Entity::getFromX($types, $search, [], $limit, $offset)) {
 		foreach ($objects as $object) {
 		    $output->writeln(" * " . $object->getUUID() . ' (' . get_class($object) . ')');
+		    $title = $object->getTitle();
+		    if (!empty($title)) $output->writeln("\t" . $object->getTitle());
+		    $output->writeln("\t" . date('r',$object->created));
+		    $output->writeln('');
 		}
 	    } else
 		throw new \RuntimeException("Could not find any entities matching your search");
