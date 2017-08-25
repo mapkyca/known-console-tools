@@ -21,6 +21,7 @@ namespace ConsolePlugins\EntityDump {
             $entity = \Idno\Common\Entity::getByID($input->getArgument('id'));
             if (!$entity) $entity = \Idno\Common\Entity::getByUUID ($input->getArgument('id'));
             if (!$entity) $entity = \Idno\Common\Entity::getByShortURL($input->getArgument('id'));
+	    if (!$entity) $entity = \Idno\Common\Entity::getBySlug($input->getArgument('id'));
             if (!$entity) throw new \RuntimeException("Error: Could not retrieve entity " . $input->getArgument('id'));
             
             $output->writeln(print_r($entity, true));
