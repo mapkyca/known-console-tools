@@ -9,5 +9,7 @@
             "email": "marcus@marcus-povey.co.uk"
         }
     ],
-    "require": {}
+    "require": {
+	"mapkyca/console-dumpconfig": "^1.0"
+    }
 }
