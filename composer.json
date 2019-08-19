@@ -1,0 +1,13 @@
+{
+    "name": "marcus/known-console-tools",
+    "description": "Development console tools for idno/known",
+    "type": "library",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Marcus Povey",
+            "email": "marcus@marcus-povey.co.uk"
+        }
+    ],
+    "require": {}
+}
