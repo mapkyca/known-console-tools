@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+	"mapkyca/console-tweakentity": "^1.0",
 	"mapkyca/console-showacl": "^1.0",
 	"mapkyca/console-usercreate": "^1.0",
 	"mapkyca/console-entitylist": "^1.0",
