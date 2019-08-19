@@ -28,6 +28,7 @@ Copy or symlink to the directories below so that they appear in ```ConsolePlugin
 * [TweakEntity](https://github.com/mapkyca/console-tweakentity) A tool to tweak field values on a given entity
 * [DumpConfig](https://github.com/mapkyca/console-dumpconfig) Dump the current running config
 * [ListUsers](https://github.com/mapkyca/console-listusers) Quickly list system users, or optional admin users
+* ... and more
 
 
 ## Warning
